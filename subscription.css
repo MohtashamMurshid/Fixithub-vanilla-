@@ -1,0 +1,106 @@
+.subs {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.sub {
+  border: solid 1px #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 300px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sub:hover {
+  scale: 1.05;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+}
+
+.sub h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #00ff6a; /* Red for price */
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.sub h3 {
+  font-size: 1.2rem;
+  color: #0095ff; /* Yellow color for headings */
+  margin-bottom: 0.5rem;
+}
+
+.sub ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.sub ul li {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+
+.sub button {
+  padding: 1rem 2rem;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.sub button:hover {
+  background-color: #ff4da6;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .subs {
+    gap: 2rem;
+  }
+
+  .sub {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .sub h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subs {
+    gap: 1rem;
+  }
+
+  .sub {
+    width: 100%;
+  }
+}
