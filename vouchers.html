@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/global.css" />
+    <title>FixItHub</title>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+      <button class="close-btn" onclick="closeSidebar()">&times;</button>
+      <div>
+        <a href="account.html">Account</a>
+        <a href="vouchers.html">Vouchers</a>
+        <a href="track.html">Track Your Order</a>
+        <a href="customer-care.html">Customer Care</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <header>
+        <div class="header-div">
+          <button class="toggle-btn" onclick="openSidebar()">&#9776;</button>
+                    <img src="./assets/images/fixithub-logo.png" alt="" />
+
+          <h1>FixItHub</h1>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services1.html">Services</a></li>
+            <li><a href="subscription.html">Subscriptions</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <h1 class="voucher">VOUCHERS</h1>
+
+      <div class="voucher-container">
+
+        <div class="voucher-box">
+          <h2>10% Off Cleaning Services</h2>
+          <p>Save 10% on your next cleaning service. Keep your home spotless while enjoying great savings!</p>
+          <button>Redeem</button>
+        </div>
+      
+        <div class="voucher-box">
+          <h2>Free Air-Conditioner Checkup</h2>
+          <p>Get a complimentary air-conditioner inspection to ensure your system is running smoothly.</p>
+          <button>Redeem</button>
+        </div>
+
+        <div class="voucher-box">
+          <h2>Free Pickup for Recycling</h2>
+          <p>Enjoy free pickup for your recyclable items. Make a difference for the environment without extra cost.</p>
+          <button>Redeem</button>
+        </div>
+
+        <div class="voucher-box">
+          <h2>$20 Discount on Repairs</h2>
+          <p>Redeem this voucher to get $20 off any repair service. Affordable fixes made simple!</p>
+          <button>Redeem</button>
+        </div>
+
+      </div>
+    
+      
+    
+   
+
+    <script>
+      // Function to filter services
+      function filterServices() {
+        const searchInput = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        const services = document.querySelectorAll(".service-card");
+
+        services.forEach((service) => {
+          const title = service.getAttribute("data-title").toLowerCase();
+          if (title.includes(searchInput)) {
+            service.style.display = "block";
+          } else {
+            service.style.display = "none";
+          }
+        });
+      }
+
+      // Function to open and close the sidebar
+
+      // Function to handle modal
+      function openModal(title, description, cost, ecoTag) {
+        document.getElementById("serviceTitle").innerText = title;
+        document.getElementById("serviceDescription").innerText = description;
+        document.getElementById("serviceCost").innerText = cost;
+        document.getElementById("ecoTag").innerText =
+          ecoTag === "eco-friendly" ? "Eco-Friendly" : "Not Eco-Friendly";
+        document.getElementById("serviceModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("serviceModal").style.display = "none";
+      }
+
+      function fixItNow() {
+        // Handle 'Fix It Now' action
+        alert("Service will be fixed now.");
+      }
+
+      function scheduleLater() {
+        // Handle 'Schedule Later' action
+        alert("Service has been scheduled.");
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
